@@ -8,3 +8,33 @@
 # How to use: 
   * Add dependency
     * Maven
+    ```xml
+	    <repositories>
+		      <repository>
+		       <id>jitpack.io</id>
+		       <url>https://jitpack.io</url>
+	       </repository>
+	    </repositories>
+    ```
+    ```xml
+    <dependency>
+        <groupId>com.github.Ryzeon</groupId>
+        <artifactId>JDA-CommandAPI</artifactId>
+        <version>1.0</version>
+    </dependency>
+    ```
+    * Gradle
+    ```groovy
+    repositories {
+        maven { url 'https://jitpack.io' }
+    }
+    ```
+    ```groovy
+    dependencies {
+        implementation 'com.github.Ryzeon:JDA-CommandAPI:1.0'
+    }
+    ```
+    
+   * [**Example Command**](src/examples/PingCommadExample)
+   * [**How to register**](src/examples/Bot)
+
