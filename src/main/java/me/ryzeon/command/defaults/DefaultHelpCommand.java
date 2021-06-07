@@ -35,9 +35,8 @@ public class DefaultHelpCommand implements BaseCommand {
                     builder.append("`").append(baseCommand.getName()).append("`");
                 }
                 description.add(builder.toString());
-                description.add("\n");
             }
-            embedBuilder.setFooter("For detailed information on a command use -help [comando]");
+            embedBuilder.setFooter("For detailed information on a command use " + CommandManager.INSTANCE.getPrefix() + "help [comando]");
             embedBuilder.setDescription(String.join("\n", description));
             textChannel.sendMessage(embedBuilder.build()).queue();
             return;
@@ -45,7 +44,12 @@ public class DefaultHelpCommand implements BaseCommand {
         String label = args[0];
         BaseCommand baseCommand = CommandManager.INSTANCE.getCommandByNameOrAlias(label);
         if (baseCommand != null) {
-            command.reply("About " + label + ": " + baseCommand.usage() + " | Aliases: " + (baseCommand.aliases().isEmpty() ? "No available aliases" : String.join(", ", baseCommand.aliases())));
+            EmbedBuilder embedBuilder = new EmbedBuilder();
+            embedBuilder.setColor(CommandManager.INSTANCE.getColor());
+            embedBuilder.setTitle("**" + label + " Info**");
+            embedBuilder.addField("Usage:", baseCommand.usage(), false);
+            embedBuilder.addField("Aliases: ", (baseCommand.aliases().isEmpty() ? "No available aliases" : String.join(", ", baseCommand.aliases())), false);
+            command.getMessage().reply(embedBuilder.build()).queue();
         } else {
             command.reply("No command was found with " + label);
         }

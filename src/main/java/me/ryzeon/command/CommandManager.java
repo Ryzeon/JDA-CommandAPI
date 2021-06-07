@@ -8,8 +8,8 @@ import me.ryzeon.command.interfaces.BaseCommand;
 import net.dv8tion.jda.api.JDA;
 
 import java.awt.*;
-import java.util.HashSet;
-import java.util.Set;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.logging.Logger;
 
 /**
@@ -28,7 +28,7 @@ public class CommandManager {
     private final Logger logger = Logger.getLogger("CommandAPI");
 
     @Getter
-    private final Set<BaseCommand> commands = new HashSet<>();
+    private final List<BaseCommand> commands = new ArrayList<>();
 
     @Getter
     private final JDA jda;
@@ -65,7 +65,6 @@ public class CommandManager {
     }
 
     /**
-     *
      * @param baseCommands provided a {@link BaseCommand} to can be register on {@link CommandManager#commands}
      */
     public void registerCommands(BaseCommand... baseCommands) {
@@ -75,7 +74,6 @@ public class CommandManager {
     }
 
     /**
-     *
      * @param baseCommand return a {@link CommandManager#commands}
      */
     public void registerCommand(BaseCommand baseCommand) {
@@ -84,7 +82,6 @@ public class CommandManager {
     }
 
     /**
-     *
      * @param name assign on {@link BaseCommand}
      * @return find all on {@link CommandManager#commands}
      * @see me.ryzeon.command.objects.CommandEvent
