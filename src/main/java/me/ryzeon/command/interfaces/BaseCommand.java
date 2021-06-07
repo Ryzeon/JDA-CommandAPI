@@ -20,16 +20,14 @@ public interface BaseCommand {
     void execute(CommandEvent command, TextChannel textChannel, Member member, String[] args);
 
     default String usage() {
-        return "Put a usage with ```java@Override usage() { return : 'YOU USAGE'} ```";
+        return "N/A";
     }
 
     default List<String> aliases() {
         return Collections.emptyList();
     }
 
-    default String getName() {
-        return this.getClass().getSimpleName();
-    }
+    String getName();
 
     default String category() {
         return "General";

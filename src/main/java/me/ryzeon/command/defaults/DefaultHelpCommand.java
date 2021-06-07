@@ -36,7 +36,7 @@ public class DefaultHelpCommand implements BaseCommand {
                 }
                 description.add(builder.toString());
             }
-            embedBuilder.setFooter("For detailed information on a command use " + CommandManager.INSTANCE.getPrefix() + "help [comando]");
+            embedBuilder.setFooter("For detailed information on a command use " + CommandManager.INSTANCE.getPrefix() + "help [command]");
             embedBuilder.setDescription(String.join("\n", description));
             textChannel.sendMessage(embedBuilder.build()).queue();
             return;

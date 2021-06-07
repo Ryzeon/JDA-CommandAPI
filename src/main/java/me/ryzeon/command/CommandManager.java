@@ -89,7 +89,7 @@ public class CommandManager {
     public BaseCommand getCommandByNameOrAlias(String name) {
         for (BaseCommand baseCommand : commands) {
             if (baseCommand.getName().equalsIgnoreCase(name)) return baseCommand;
-            if (baseCommand.aliases().isEmpty()) {
+            if (!baseCommand.aliases().isEmpty()) {
                 for (String alt : baseCommand.aliases()) {
                     if (alt.equalsIgnoreCase(name)) return baseCommand;
                 }
