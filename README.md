@@ -20,7 +20,7 @@
     <dependency>
         <groupId>com.github.Ryzeon</groupId>
         <artifactId>JDA-CommandAPI</artifactId>
-        <version>1.0</version>
+        <version>1.0-SNAPSHOT</version>
     </dependency>
     ```
     * Gradle
