@@ -11,27 +11,27 @@
     ```xml
     <repositories>
         <repository>
-		<id>jitpack.io</id>
-		<url>https://jitpack.io</url>
+		<id>ryzeon-repo</id>
+		<url>http://ryzeon.me:8081/repository/ryzeon</url>
         </repository>
     </repositories>
     ```
     ```xml
     <dependency>
-        <groupId>com.github.Ryzeon</groupId>
+        <groupId>me.ryzeon.command</groupId>
         <artifactId>JDA-CommandAPI</artifactId>
-        <version>VERSION</version>
+        <version>1.2-SNAPSHOT</version>
     </dependency>
     ```
     * Gradle
     ```groovy
     repositories {
-        maven { url 'https://jitpack.io' }
+        maven { url 'http://ryzeon.me:8081/repository/ryzeon' }
     }
     ```
     ```groovy
     dependencies {
-        implementation 'com.github.Ryzeon:JDA-CommandAPI:1.2'
+        implementation 'me.ryzeon.command:JDA-CommandAPI:1.2'
     }
     ```
     
