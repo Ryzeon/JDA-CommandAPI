@@ -31,7 +31,7 @@
     ```
     ```groovy
     dependencies {
-        implementation 'com.github.Ryzeon:JDA-CommandAPI:1.0'
+        implementation 'com.github.Ryzeon:JDA-CommandAPI:1.2'
     }
     ```
     
