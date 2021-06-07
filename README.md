@@ -9,12 +9,12 @@
   * Add dependency
     * Maven
     ```xml
-	    <repositories>
-		      <repository>
+	   <repositories>
+		     <repository>
 		       <id>jitpack.io</id>
 		       <url>https://jitpack.io</url>
-	       </repository>
-	    </repositories>
+	      </repository>
+	   </repositories>
     ```
     ```xml
     <dependency>
@@ -35,6 +35,6 @@
     }
     ```
     
-   * [**Example Command**](src/examples/PingCommadExample)
-   * [**How to register**](src/examples/Bot)
+   * [**Example Command**](src/examples/PingCommadExample.java)
+   * [**How to register**](src/examples/Bot.java)
 
