@@ -12,7 +12,7 @@
     <repositories>
         <repository>
 		<id>ryzeon-repo</id>
-		<url>http://ryzeon.me:8081/repository/ryzeon</url>
+		<url>http://repo.ryzeon.me/repository/ryzeon</url>
         </repository>
     </repositories>
     ```
@@ -26,7 +26,7 @@
     * Gradle
     ```groovy
     repositories {
-        maven { url 'http://ryzeon.me:8081/repository/ryzeon' }
+        maven { url 'http://repo.ryzeon.me/repository/ryzeon' }
     }
     ```
     ```groovy
