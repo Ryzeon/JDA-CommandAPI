@@ -35,6 +35,6 @@
     }
     ```
     
-   * [**Example Command**](src/examples/PingCommadExample.java)
-   * [**How to register**](src/examples/Bot.java)
+   * [**Example Command**](src/examples/java/PingCommadExample.java)
+   * [**How to register**](src/examples/java/Bot.java)
 
