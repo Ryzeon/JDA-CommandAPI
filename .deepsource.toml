@@ -3,3 +3,7 @@ version = 1
 [[analyzers]]
 name = "java"
 enabled = true
+
+[[transformers]]
+name = "google-java-format"
+enabled = true
