@@ -6,7 +6,7 @@
 
     <groupId>me.ryzeon.command</groupId>
     <artifactId>JDA-CommandAPI</artifactId>
-    <version>1.2-SNAPSHOT</version>
+    <version>1.2-HOTFIX</version>
 
     <build>
         <plugins>
