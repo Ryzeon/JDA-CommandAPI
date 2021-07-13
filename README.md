@@ -1,3 +1,4 @@
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/1fc6e986f6024ab289916d2f67bcb0f1)](https://app.codacy.com/gh/Ryzeon/JDA-CommandAPI?utm_source=github.com&utm_medium=referral&utm_content=Ryzeon/JDA-CommandAPI&utm_campaign=Badge_Grade_Settings)
 [![Open Source](https://badges.frapsoft.com/os/v1/open-source.svg?v=102)](https://GitHub.com/Ryzeon/rImgServer)
 [![](https://jitpack.io/v/Ryzeon/JDA-CommandAPI.svg)](https://jitpack.io/#Ryzeon/JDA-CommandAPI)
 
