@@ -1,19 +1,18 @@
 package me.harpylmao;
 
-import me.harpylmao.handler.CommandHandler;
-import me.harpylmao.interfaces.Command;
-import lombok.Getter;
-import lombok.Setter;
-import me.harpylmao.interfaces.CommandParams;
-import net.dv8tion.jda.api.JDA;
-import org.reflections8.Reflections;
-
 import java.awt.*;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.HashMap;
 import java.util.List;
 import java.util.logging.Logger;
+import lombok.Getter;
+import lombok.Setter;
+import me.harpylmao.handler.CommandHandler;
+import me.harpylmao.interfaces.Command;
+import me.harpylmao.interfaces.CommandParams;
+import net.dv8tion.jda.api.JDA;
+import org.reflections8.Reflections;
 
 /**
  * Created by Ryzeon Project: JDA-CommandAPI Date: 06/06/2021 @ 22:23 Twitter: @Ryzeon_ 😎 Github:

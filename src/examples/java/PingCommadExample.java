@@ -12,18 +12,24 @@ import net.dv8tion.jda.api.events.message.guild.GuildMessageReceivedEvent;
  */
 
 @CommandParams(
-        name = "ping",
-        category = "Test category",
-        usage = """
+  name = "ping",
+  category = "Test category",
+  usage = """
                   A simple example command
                 """,
-        permissions = {Permission.ADMINISTRATOR},
-        cooldown = 20_000L //Time in milliseconds
+  permissions = { Permission.ADMINISTRATOR },
+  cooldown = 20_000L //Time in milliseconds
 )
 public class PingCommadExample implements Command {
 
   @Override
-  public void execute(CommandEvent command, TextChannel textChannel, Member member, String[] args, GuildMessageReceivedEvent event) {
+  public void execute(
+    CommandEvent command,
+    TextChannel textChannel,
+    Member member,
+    String[] args,
+    GuildMessageReceivedEvent event
+  ) {
     command.reply("Pong!");
   }
 }

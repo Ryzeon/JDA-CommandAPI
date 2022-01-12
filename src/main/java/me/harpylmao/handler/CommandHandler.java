@@ -2,7 +2,6 @@ package me.harpylmao.handler;
 
 import java.util.Arrays;
 import java.util.List;
-
 import me.harpylmao.CommandManager;
 import me.harpylmao.interfaces.CommandParams;
 import me.harpylmao.objects.CommandEvent;

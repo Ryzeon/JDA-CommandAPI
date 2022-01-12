@@ -1,17 +1,17 @@
 package me.harpylmao.utils;
 
+import java.util.HashMap;
+import java.util.Map;
+import java.util.UUID;
 import lombok.Data;
 import lombok.Getter;
 import net.dv8tion.jda.api.entities.User;
 
-import java.util.HashMap;
-import java.util.Map;
-import java.util.UUID;
-
 @Data
 public class Cooldown {
 
-  @Getter private static Map<User, Long> timeMap;
+  @Getter
+  private static Map<User, Long> timeMap;
 
   private UUID uniqueId = UUID.randomUUID();
 

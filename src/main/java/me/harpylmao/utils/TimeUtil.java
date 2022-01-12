@@ -13,7 +13,19 @@ public class TimeUtil {
     remainingTime = remainingTime.minusMinutes(minutes);
     long seconds = remainingTime.getSeconds();
 
-    return (hours + " hour" + (hours == 1 ? "" : "s") + " " + minutes + " minute" + (minutes == 1 ? "" : "s") + " " + seconds + " second" + (seconds == 1 ? "" : "s"));
+    return (
+      hours +
+      " hour" +
+      (hours == 1 ? "" : "s") +
+      " " +
+      minutes +
+      " minute" +
+      (minutes == 1 ? "" : "s") +
+      " " +
+      seconds +
+      " second" +
+      (seconds == 1 ? "" : "s")
+    );
   }
 
   public static String millisToSeconds(long millis) {
