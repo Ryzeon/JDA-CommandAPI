@@ -1,7 +1,5 @@
 package me.harpylmao.handler;
 
-import java.util.Arrays;
-import java.util.List;
 import me.harpylmao.CommandManager;
 import me.harpylmao.interfaces.CommandParams;
 import me.harpylmao.objects.CommandEvent;
@@ -11,6 +9,9 @@ import net.dv8tion.jda.api.Permission;
 import net.dv8tion.jda.api.events.message.guild.GuildMessageReceivedEvent;
 import net.dv8tion.jda.api.hooks.ListenerAdapter;
 import org.jetbrains.annotations.NotNull;
+
+import java.util.Arrays;
+import java.util.List;
 
 public class CommandHandler extends ListenerAdapter {
 
@@ -38,12 +39,12 @@ public class CommandHandler extends ListenerAdapter {
         .getParamsMap()
         .get(commandPreConstructor.getCommand());
       try {
-        if (!cooldown.hasExpired(event.getMember().getUser())) {
+        if (!cooldown.hasExpired(event.getMessage().getContentRaw().replaceFirst(CommandManager.INSTANCE.getPrefix(), ""), commandPreConstructor.getCommand(), event.getMember().getUser())) {
           event
             .getMessage()
             .reply(
               "You have a cooldown of " +
-              cooldown.getTimeLeft(event.getMember().getUser())
+              cooldown.getTimeLeft(event.getMessage().getContentRaw().replaceFirst(CommandManager.INSTANCE.getPrefix(), ""), commandPreConstructor.getCommand(), event.getMember().getUser())
             )
             .queue();
           return;
@@ -58,9 +59,7 @@ public class CommandHandler extends ListenerAdapter {
         );
 
         if (commandParams.permissions().length > 0) {
-          List<Permission> permissions = Arrays.asList(
-            commandParams.permissions()
-          );
+          List<Permission> permissions = Arrays.asList(commandParams.permissions());
           if (event.getMember().getPermissions().containsAll(permissions)) {
             commandPreConstructor
               .getCommand()
@@ -71,7 +70,7 @@ public class CommandHandler extends ListenerAdapter {
                 commandPreConstructor.getArgs(),
                 event
               );
-            new Cooldown(event.getMember().getUser(), commandParams.cooldown());
+            new Cooldown(event.getMessage().getContentRaw().replaceFirst(CommandManager.INSTANCE.getPrefix(), ""), commandPreConstructor.getCommand(), event.getMember().getUser(), commandParams.cooldown());
           } else {
             event
               .getMessage()
@@ -88,14 +87,13 @@ public class CommandHandler extends ListenerAdapter {
               commandPreConstructor.getArgs(),
               event
             );
-          new Cooldown(event.getMember().getUser(), commandParams.cooldown());
+          new Cooldown(event.getMessage().getContentRaw().replaceFirst(CommandManager.INSTANCE.getPrefix(), ""), commandPreConstructor.getCommand(), event.getMember().getUser(), commandParams.cooldown());
         }
       } catch (Exception exception) {
         commandManager
           .getLogger()
           .warning(
-            "An error occurred while executing " +
-            commandPreConstructor.getLabel()
+            "An error occurred while executing " + commandPreConstructor.getLabel()
           );
         event.getMessage().reply(commandManager.getErrorMessage()).queue();
         exception.printStackTrace();
