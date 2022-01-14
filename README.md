@@ -3,6 +3,7 @@
 [![](https://jitpack.io/v/Ryzeon/JDA-CommandAPI.svg)](https://jitpack.io/#Ryzeon/JDA-CommandAPI)
 
 # JDA-CommandAPI
+**This is a improved version of Ryzeon's JDA-CommandAPI by** [**HarpyLMAO**](https://github.com/HarpyLMAO)
 
 <img src="https://img.shields.io/badge/Java-ED8B00?style=for-the-badge&logo=java&logoColor=white"> <img src="https://img.shields.io/badge/Discord-7289DA?style=for-the-badge&logo=discord&logoColor=white">
 
@@ -12,8 +13,8 @@
     ```xml
     <repositories>
         <repository>
-		<id>ryzeon-repo</id>
-		<url>http://repo.ryzeon.me/repository/ryzeon</url>
+        <id>ryzeon-repo</id>
+        <url>http://repo.ryzeon.me/repository/ryzeon</url>
         </repository>
     </repositories>
     ```
@@ -35,7 +36,8 @@
         implementation 'me.ryzeon.command:JDA-CommandAPI:1.2'
     }
     ```
+  
     
-   * [**Example Command**](src/examples/java/PingCommadExample.java)
-   * [**How to register**](src/examples/java/Bot.java)
+  * [**Example Command**](src/examples/java/PingCommadExample.java)
+  * [**How to register**](src/examples/java/Bot.java)
 
